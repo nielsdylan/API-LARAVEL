@@ -23,7 +23,7 @@ Route::post('/users/create', [UserController::class, 'store']);
 Route::put('/users/update/{user_id}', [UserController::class, 'update']);
 Route::delete('/users/delete/{user_id}', [UserController::class, 'delete']);
 
-Route::get('/motos', [MotorcycleController::class, 'index']);
+Route::get('/moto', [MotorcycleController::class, 'index']);
 Route::post('/moto/create', [MotorcycleController::class, 'store']);
 Route::put('/moto/update/{user_id}', [MotorcycleController::class, 'update']);
 Route::delete('/moto/delete/{user_id}', [MotorcycleController::class, 'delete']);

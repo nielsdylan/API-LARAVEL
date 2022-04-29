@@ -42,18 +42,19 @@ class MotorcycleController extends Controller
     {
         # code...
     }
-    public function update(Request $request, $user_id)
+    public function update(Request $request, $motorcycle_id)
     {
+        // return $motorcycle_id;
 
-        $user = Motorcycle::where('active', 1)->where('user_id', $user_id )
+        $motorcycle = Motorcycle::where('active', 1)->where('motorcycle_id', $motorcycle_id )
         ->update([
-            'dni'       =>  $request->dni,
-            'last_name' =>  $request->last_name,
-            'email'     =>  $request->email,
-            'whatsapp'  =>  $request->whatsapp,
-            'telephone' =>  $request->telephone
+            'trademark' =>  $request->trademark,
+            'model'     =>  $request->model,
+            'reference' =>  $request->reference,
+            'price'     =>  $request->price,
+            'image'     =>  $request->image
         ]);
-        if ($user==true) {
+        if ($motorcycle==true) {
             return response()->json([
                 'success'=>true,
                 'status'=>200
